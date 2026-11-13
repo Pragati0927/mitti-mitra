@@ -1,0 +1,264 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="results-page">
+    <div class="results-layout">
+        <!-- LEFT COLUMN: Farm Details Summary -->
+        <aside class="farm-summary-card">
+            <div class="summary-header">
+                <h3>Khet ki Jankari / Farm Details</h3>
+                <button class="edit-btn" title="Edit">✏️</button>
+            </div>
+
+            <div class="summary-body">
+                <!-- Greeting -->
+                <div class="greeting">
+                    <p class="greeting-text">Namaste, <span id="farmerName">Ramesh Singh</span> 👋</p>
+                    <div class="greeting-badge">
+                        <span class="leaf-icon">🌿</span>
+                        <span id="locationBadge">Greater Noida 32°C</span>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="detail-section">
+                    <h4 class="detail-label">
+                        <span class="detail-icon">📍</span> Location
+                    </h4>
+                    <div class="detail-items">
+                        <div class="detail-item">
+                            <span class="sub-icon">📌</span>
+                            <span class="item-label">Village</span>
+                            <span class="item-value" id="resVillage">Bisrakh</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="sub-icon">📌</span>
+                            <span class="item-label">District</span>
+                            <span class="item-value" id="resDistrict">Gautam Buddha Nagar</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="sub-icon">📌</span>
+                            <span class="item-label">State</span>
+                            <span class="item-value" id="resState">Uttar Pradesh</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Crop History Timeline -->
+                <div class="detail-section">
+                    <h4 class="detail-label">
+                        <span class="detail-icon">🌾</span> Crop History (Last 3 Seasons)
+                    </h4>
+                    <div class="timeline" id="cropTimeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-season">Kharif 2025</span>
+                                <span class="timeline-crop">Dhan (Rice)</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-season">Rabi 2025-26</span>
+                                <span class="timeline-crop">Gehun (Wheat)</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-season">Zaid 2026</span>
+                                <span class="timeline-crop">Moong</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Current Crop -->
+                <div class="detail-section">
+                    <h4 class="detail-label">
+                        <span class="detail-icon">🌿</span> Current Crop
+                    </h4>
+                    <div class="current-crop-info">
+                        <div class="crop-name-row">
+                            <span class="crop-icon-lg">🌾</span>
+                            <span class="crop-name" id="resCropName">Gehun (Wheat)</span>
+                        </div>
+                        <div class="crop-badges">
+                            <span class="badge badge-green" id="resCropStage">Standing crop</span>
+                            <span class="badge badge-outline" id="resCropDays">75 days</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Field Info -->
+                <div class="field-info-row">
+                    <div class="field-info-item">
+                        <span class="fi-label">Field Size</span>
+                        <span class="fi-value" id="resFieldSize">2.5 acre</span>
+                    </div>
+                    <div class="field-info-item">
+                        <span class="fi-label">Irrigation</span>
+                        <span class="fi-value" id="resIrrigation">Tubewell</span>
+                    </div>
+                    <div class="field-info-item">
+                        <span class="fi-label">Soil Type</span>
+                        <span class="fi-value" id="resSoilType">Alluvial<br><small>(auto from location)</small></span>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <button class="btn-get-rec" id="getRecBtn">
+                    <span class="btn-rec-icon">🌾</span>
+                    <div class="btn-rec-text">
+                        <span>Anushansa Dekhein</span>
+                        <span>Get Recommendation</span>
+                    </div>
+                </button>
+            </div>
+        </aside>
+
+        <!-- RIGHT COLUMN: Results Cards -->
+        <div class="results-cards">
+            <!-- Card 1: Soil Microbiome Score -->
+            <div class="result-card microbiome-card">
+                <div class="card-title">
+                    <h3>Soil Microbiome Score</h3>
+                    <span class="info-tooltip" title="Score based on crop rotation diversity and soil health indicators">ℹ️</span>
+                </div>
+                <div class="microbiome-content">
+                    <div class="gauge-section">
+                        <div class="circular-gauge">
+                            <svg viewBox="0 0 120 120" class="gauge-svg">
+                                <circle cx="60" cy="60" r="52" class="gauge-bg" />
+                                <circle cx="60" cy="60" r="52" class="gauge-fill" id="gaugeFill" />
+                            </svg>
+                            <div class="gauge-text">
+                                <span class="gauge-score" id="gaugeScore">72</span>
+                                <span class="gauge-max">/100</span>
+                            </div>
+                        </div>
+                        <p class="gauge-status" id="gaugeStatus">Moderate, needs diversity</p>
+                    </div>
+                    <div class="bars-section">
+                        <div class="bar-item">
+                            <div class="bar-header">
+                                <span class="bar-icon">🦠</span>
+                                <span class="bar-label">Beneficial bacteria</span>
+                                <span class="bar-level" id="bacteriaLevel">Medium</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill bacteria-bar" id="bacteriaBar" style="width:65%"></div></div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-header">
+                                <span class="bar-icon">🍄</span>
+                                <span class="bar-label">Fungi</span>
+                                <span class="bar-level" id="fungiLevel">Low</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill fungi-bar" id="fungiBar" style="width:35%"></div></div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-header">
+                                <span class="bar-icon">🧬</span>
+                                <span class="bar-label">Nitrogen-fixers</span>
+                                <span class="bar-level" id="nFixerLevel">Low</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill nfixer-bar" id="nFixerBar" style="width:30%"></div></div>
+                        </div>
+                        <p class="bar-note">(after continuous rice-wheat)</p>
+                    </div>
+                </div>
+                <div class="warning-alert" id="microbiomeWarning">
+                    <span class="warning-icon">⚠️</span>
+                    <p>Do faslon se mitti thak gayi hai — cereal-cereal rotation is draining microbiome.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Recommended Next Crop -->
+            <div class="result-card recommendation-card">
+                <div class="card-title">
+                    <h3><span class="title-icon">🌱</span> Recommended Next Crop</h3>
+                </div>
+                <div class="rec-cards-row">
+                    <div class="rec-card rec-primary">
+                        <span class="rec-badge">1</span>
+                        <span class="rec-type">Primary Recommendation</span>
+                        <div class="rec-crop-info">
+                            <div class="rec-text">
+                                <h4 class="rec-crop-name" id="primaryCrop">Summer Moong</h4>
+                                <p class="rec-crop-sub" id="primarySub">Green gram</p>
+                                <p class="rec-reason" id="primaryReason">N-fixing, 60 days, breaks wheat pathogens</p>
+                            </div>
+                            <span class="rec-crop-icon">🌿</span>
+                        </div>
+                    </div>
+                    <div class="rec-card rec-alternate">
+                        <span class="rec-badge">2</span>
+                        <span class="rec-type">Alternate Option</span>
+                        <div class="rec-crop-info">
+                            <div class="rec-text">
+                                <h4 class="rec-crop-name" id="altCrop">Dhaincha</h4>
+                                <p class="rec-crop-sub" id="altSub">(green manure)</p>
+                                <p class="rec-reason" id="altReason">rebuilds organic carbon</p>
+                            </div>
+                            <span class="rec-crop-icon">🌻</span>
+                        </div>
+                    </div>
+                    <div class="rec-card rec-third">
+                        <span class="rec-badge">3</span>
+                        <span class="rec-type">Next Rabi Suggestion</span>
+                        <div class="rec-crop-info">
+                            <div class="rec-text">
+                                <h4 class="rec-crop-name" id="thirdCrop">Mustard or Chana</h4>
+                                <p class="rec-crop-sub" id="thirdSub">after moong</p>
+                                <p class="rec-reason" id="thirdReason">Diversifies roots, improves soil biology</p>
+                            </div>
+                            <span class="rec-crop-icon">🌾</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom row: Why It Works + Expected Benefits side by side -->
+            <div class="bottom-results-row">
+                <!-- Card 3: Why It Works -->
+                <div class="result-card why-card">
+                    <div class="card-title">
+                        <h3><span class="title-icon">✅</span> Why It Works</h3>
+                    </div>
+                    <ul class="check-list" id="whyList">
+                        <li><span class="check-icon">✅</span> Nitrogen leftover from moong reduces urea need</li>
+                        <li><span class="check-icon">✅</span> Breaks pest & disease cycle of rice-wheat system</li>
+                        <li><span class="check-icon">✅</span> Improves root diversity and soil structure</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Expected Benefits -->
+                <div class="result-card benefits-card">
+                    <div class="card-title">
+                        <h3><span class="title-icon">📈</span> Expected Benefits</h3>
+                    </div>
+                    <ul class="benefit-list" id="benefitsList">
+                        <li><span class="benefit-icon">🌱</span> +8–12% next wheat yield</li>
+                        <li><span class="benefit-icon">🌱</span> Less urea required</li>
+                        <li><span class="benefit-icon">🌱</span> Better soil structure & health</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Action Bar -->
+    <div class="results-bottom-bar">
+        <button class="btn-hindi" id="hindiBtn">
+            <span>🔊</span> Hindi mein suno
+        </button>
+        <button class="btn-save" id="saveBtn">
+            <span>🔖</span> Save Plan
+        </button>
+        <button class="btn-share" id="shareBtn">
+            <span>🔗</span> Share with Kisan Mitra
+        </button>
+    </div>
+</main>
+{% endblock %}

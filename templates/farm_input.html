@@ -1,0 +1,300 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="farm-input-page">
+    <!-- Page Title -->
+    <div class="page-header">
+        <h1 class="page-title">Khet ki Jankari Bharein / Enter Farm Details</h1>
+        <p class="page-subtitle">Sirf yeh 3 baatein batayein — location, purani faslein, abhi ki fasal</p>
+    </div>
+
+    <form id="farmForm" autocomplete="off">
+        <!-- SECTION 1: Location -->
+        <section class="form-section">
+            <div class="section-header">
+                <span class="section-number">1</span>
+                <h2 class="section-title">Location <span class="hindi">(स्थान)</span></h2>
+            </div>
+            <div class="section-body location-section">
+                <div class="location-inputs">
+                    <div class="input-row">
+                        <div class="form-group">
+                            <label class="form-label">गाँव / Village</label>
+                            <div class="input-with-icon">
+                                <span class="input-icon">📍</span>
+                                <input type="text" id="village" name="village" class="form-input" placeholder="e.g. Bisrakh" value="Bisrakh">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">जिला / District</label>
+                            <select id="district" name="district" class="form-select">
+                                <option value="Gautam Buddha Nagar" selected>Gautam Buddha Nagar</option>
+                                <option value="Ghaziabad">Ghaziabad</option>
+                                <option value="Lucknow">Lucknow</option>
+                                <option value="Varanasi">Varanasi</option>
+                                <option value="Patna">Patna</option>
+                                <option value="Jaipur">Jaipur</option>
+                                <option value="Bhopal">Bhopal</option>
+                                <option value="Indore">Indore</option>
+                                <option value="Pune">Pune</option>
+                                <option value="Nagpur">Nagpur</option>
+                                <option value="Ahmedabad">Ahmedabad</option>
+                                <option value="Surat">Surat</option>
+                                <option value="Bengaluru">Bengaluru</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Kolkata">Kolkata</option>
+                                <option value="Ludhiana">Ludhiana</option>
+                                <option value="Amritsar">Amritsar</option>
+                                <option value="Karnal">Karnal</option>
+                                <option value="Hisar">Hisar</option>
+                                <option value="Meerut">Meerut</option>
+                                <option value="Agra">Agra</option>
+                                <option value="Kanpur">Kanpur</option>
+                                <option value="Allahabad">Allahabad</option>
+                                <option value="Bareilly">Bareilly</option>
+                                <option value="Moradabad">Moradabad</option>
+                                <option value="Aligarh">Aligarh</option>
+                                <option value="Mathura">Mathura</option>
+                                <option value="Saharanpur">Saharanpur</option>
+                                <option value="Muzaffarnagar">Muzaffarnagar</option>
+                                <option value="Bulandshahr">Bulandshahr</option>
+                                <option value="Gorakhpur">Gorakhpur</option>
+                                <option value="Faridabad">Faridabad</option>
+                                <option value="Gurugram">Gurugram</option>
+                                <option value="Rohtak">Rohtak</option>
+                                <option value="Panipat">Panipat</option>
+                                <option value="Sonipat">Sonipat</option>
+                                <option value="Ambala">Ambala</option>
+                                <option value="Jalandhar">Jalandhar</option>
+                                <option value="Patiala">Patiala</option>
+                                <option value="Bathinda">Bathinda</option>
+                                <option value="Sangrur">Sangrur</option>
+                                <option value="Firozpur">Firozpur</option>
+                                <option value="Jodhpur">Jodhpur</option>
+                                <option value="Udaipur">Udaipur</option>
+                                <option value="Kota">Kota</option>
+                                <option value="Ajmer">Ajmer</option>
+                                <option value="Bikaner">Bikaner</option>
+                                <option value="Alwar">Alwar</option>
+                                <option value="Sikar">Sikar</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">राज्य / State</label>
+                            <select id="state" name="state" class="form-select">
+                                <option value="Uttar Pradesh" selected>Uttar Pradesh</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+                                <option value="Ladakh">Ladakh</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Puducherry">Puducherry</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="info-line"><span class="info-icon">ℹ️</span> Location se mitti prakar aur mausam auto milenge</p>
+                </div>
+                <div class="location-map">
+                    <div class="map-illustration">
+                        <div class="map-shape"></div>
+                        <div class="map-pin">
+                            <span class="pin-icon">📍</span>
+                            <span class="pin-label">WESTERN UTTAR PRADESH</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-location" id="useLocationBtn">
+                        <span>📍</span> Mera location use karein
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Crop History -->
+        <section class="form-section">
+            <div class="section-header">
+                <span class="section-number">2</span>
+                <h2 class="section-title">Pichhli 2–3 faslein / Crop history <span class="required">(required)</span></h2>
+            </div>
+            <div class="section-body">
+                <div class="crop-history-rows">
+                    <div class="history-row" data-index="0">
+                        <select class="season-select" name="season_0">
+                            <option value="Kharif 2025" selected>Kharif 2025</option>
+                            <option value="Rabi 2024-25">Rabi 2024-25</option>
+                            <option value="Zaid 2025">Zaid 2025</option>
+                            <option value="Kharif 2024">Kharif 2024</option>
+                            <option value="Rabi 2023-24">Rabi 2023-24</option>
+                            <option value="Zaid 2024">Zaid 2024</option>
+                        </select>
+                        <div class="crop-chip selected-crop" data-crop="Rice">
+                            <span class="chip-icon">🌾</span>
+                            <span class="chip-text">Dhan / Rice</span>
+                            <button type="button" class="chip-remove" aria-label="Remove">×</button>
+                        </div>
+                    </div>
+                    <div class="history-row" data-index="1">
+                        <select class="season-select" name="season_1">
+                            <option value="Kharif 2025">Kharif 2025</option>
+                            <option value="Rabi 2024-25" selected>Rabi 2024-25</option>
+                            <option value="Zaid 2025">Zaid 2025</option>
+                            <option value="Kharif 2024">Kharif 2024</option>
+                            <option value="Rabi 2023-24">Rabi 2023-24</option>
+                            <option value="Zaid 2024">Zaid 2024</option>
+                        </select>
+                        <div class="crop-chip selected-crop" data-crop="Wheat">
+                            <span class="chip-icon">🌿</span>
+                            <span class="chip-text">Gehun / Wheat</span>
+                            <button type="button" class="chip-remove" aria-label="Remove">×</button>
+                        </div>
+                    </div>
+                    <div class="history-row" data-index="2">
+                        <select class="season-select" name="season_2">
+                            <option value="Kharif 2025">Kharif 2025</option>
+                            <option value="Rabi 2024-25">Rabi 2024-25</option>
+                            <option value="Zaid 2025" selected>Zaid 2025</option>
+                            <option value="Kharif 2024">Kharif 2024</option>
+                            <option value="Rabi 2023-24">Rabi 2023-24</option>
+                            <option value="Zaid 2024">Zaid 2024</option>
+                        </select>
+                        <button type="button" class="add-crop-btn" id="addThirdCrop">
+                            <span>+</span> Add third crop (optional)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Crop Selection Chips -->
+                <div class="crop-chips-scroll">
+                    <div class="crop-chips-container">
+                        <button type="button" class="crop-option-chip" data-crop="Rice" data-hindi="Dhan"><span class="chip-icon">🌾</span> Rice</button>
+                        <button type="button" class="crop-option-chip" data-crop="Wheat" data-hindi="Gehun"><span class="chip-icon">🌿</span> Wheat</button>
+                        <button type="button" class="crop-option-chip" data-crop="Mustard" data-hindi="Sarson"><span class="chip-icon">🌻</span> Mustard</button>
+                        <button type="button" class="crop-option-chip" data-crop="Moong" data-hindi="Moong"><span class="chip-icon">🫘</span> Moong</button>
+                        <button type="button" class="crop-option-chip" data-crop="Urad" data-hindi="Urad"><span class="chip-icon">🫘</span> Urad</button>
+                        <button type="button" class="crop-option-chip" data-crop="Chana" data-hindi="Chana"><span class="chip-icon">🫘</span> Chana</button>
+                        <button type="button" class="crop-option-chip" data-crop="Maize" data-hindi="Makka"><span class="chip-icon">🌽</span> Maize</button>
+                        <button type="button" class="crop-option-chip" data-crop="Potato" data-hindi="Aalu"><span class="chip-icon">🥔</span> Potato</button>
+                        <button type="button" class="crop-option-chip" data-crop="Sugarcane" data-hindi="Ganna"><span class="chip-icon">🎋</span> Sugarcane</button>
+                        <button type="button" class="crop-option-chip" data-crop="Bajra" data-hindi="Bajra"><span class="chip-icon">🌾</span> Bajra</button>
+                        <button type="button" class="crop-option-chip" data-crop="Arhar" data-hindi="Arhar"><span class="chip-icon">🌿</span> Arhar</button>
+                    </div>
+                </div>
+                <p class="info-line"><span class="info-icon">ℹ️</span> Rotation engine inhi faslon se mitti microbiome ka andaaza lagata hai</p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Current Crop -->
+        <section class="form-section">
+            <div class="section-header">
+                <span class="section-number">3</span>
+                <h2 class="section-title">Current crop <span class="hindi">(अभी की फसल)</span></h2>
+            </div>
+            <div class="section-body">
+                <div class="current-crop-row1">
+                    <div class="form-group">
+                        <label class="form-label">Current crop <span class="hindi">(वर्तमान फसल)</span></label>
+                        <div class="input-with-icon">
+                            <span class="input-icon">🌿</span>
+                            <select id="currentCrop" name="current_crop" class="form-select">
+                                <option value="Gehun / Wheat" selected>Gehun / Wheat</option>
+                                <option value="Dhan / Rice">Dhan / Rice</option>
+                                <option value="Sarson / Mustard">Sarson / Mustard</option>
+                                <option value="Moong">Moong</option>
+                                <option value="Urad">Urad</option>
+                                <option value="Chana">Chana</option>
+                                <option value="Makka / Maize">Makka / Maize</option>
+                                <option value="Aalu / Potato">Aalu / Potato</option>
+                                <option value="Ganna / Sugarcane">Ganna / Sugarcane</option>
+                                <option value="Bajra">Bajra</option>
+                                <option value="Arhar">Arhar</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group stage-group">
+                        <label class="form-label">Stage <span class="hindi">(फसल की स्थिति)</span></label>
+                        <div class="stage-toggle">
+                            <button type="button" class="stage-btn" data-stage="Just sown">
+                                <span class="stage-icon">🌱</span> Just sown
+                            </button>
+                            <button type="button" class="stage-btn active" data-stage="Standing">
+                                <span class="stage-icon">🌿</span> Standing
+                            </button>
+                            <button type="button" class="stage-btn" data-stage="Near harvest">
+                                <span class="stage-icon">🌾</span> Near harvest
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="current-crop-row2">
+                    <div class="form-group">
+                        <label class="form-label">Days since sowing <span class="hindi">(बीज बोने के दिन)</span></label>
+                        <div class="input-with-icon">
+                            <input type="number" id="daysSowing" name="days" class="form-input" value="75" min="0" max="365">
+                            <span class="input-suffix">days</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Field size <span class="hindi">(खेत का आकार)</span></label>
+                        <div class="input-with-icon">
+                            <input type="number" id="fieldSize" name="field_size" class="form-input" value="2.5" min="0" step="0.1">
+                            <span class="input-suffix">acre</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Irrigation <span class="hindi">(सिंचाई का साधन)</span></label>
+                        <div class="input-with-icon">
+                            <span class="input-icon">💧</span>
+                            <select id="irrigation" name="irrigation" class="form-select">
+                                <option value="Tubewell" selected>Tubewell / Canal / Rainfed</option>
+                                <option value="Canal">Canal</option>
+                                <option value="Rainfed">Rainfed</option>
+                                <option value="Drip">Drip Irrigation</option>
+                                <option value="Sprinkler">Sprinkler</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar">
+        <button type="button" class="btn-clear" id="clearBtn">
+            <span class="btn-icon">🗑️</span> Clear
+        </button>
+        <p class="bottom-info">
+            <span class="check-icon">✅</span> Mitti test zaroori nahi — pehle history se recommendation mil sakti hai
+        </p>
+        <button type="button" class="btn-continue" id="continueBtn">
+            <span class="btn-icon">🌾</span> Aage Badhein / Continue <span class="arrow">→</span>
+        </button>
+    </div>
+</main>
+{% endblock %}

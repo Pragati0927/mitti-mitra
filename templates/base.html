@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitti Mitra — Soil Microbiome Crop Rotation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="navbar-brand">
+                <span class="brand-icon">🌾</span>
+                <div class="brand-text">
+                    <span class="brand-title">Mitti Mitra</span>
+                    <span class="brand-subtitle">Soil Microbiome Crop Rotation</span>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <div class="lang-toggle">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="hi">हिन्दी</button>
+            </div>
+            <div class="farmer-profile">
+                <span class="farmer-avatar">👨‍🌾</span>
+                <span class="farmer-name">Ramesh Singh</span>
+                <span class="dropdown-arrow">▾</span>
+            </div>
+            <div class="location-badge">
+                <span class="loc-icon">📍</span>
+                <span class="loc-text">Greater Noida 32°C</span>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

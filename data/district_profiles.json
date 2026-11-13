@@ -1,0 +1,532 @@
+{
+  "Lucknow": {
+    "state": "Uttar Pradesh", "lat": 26.85, "lon": 80.95,
+    "pH": 7.2, "Nitrogen_N_ppm": 130, "Phosphorus_P_ppm": 28, "Potassium_K_ppm": 210,
+    "Organic_Matter": 3.2, "Texture": "Loam", "Soil_Color": "Dark Brown",
+    "Bulk_Density": 1.38, "Moisture": 22, "Porosity": 42, "WHC": 38,
+    "CEC": 18, "EC": 0.45, "Depth": 30,
+    "Temperature": 27, "Humidity": 62, "Precipitation": 8.5,
+    "Evapotranspiration": 4.8, "Root_Zone_Moisture": 0.35, "Water_Table_Depth": 8,
+    "Soil_Depth": 1.5, "soil_type_label": "Alluvial"
+  },
+  "Varanasi": {
+    "state": "Uttar Pradesh", "lat": 25.32, "lon": 83.01,
+    "pH": 7.0, "Nitrogen_N_ppm": 125, "Phosphorus_P_ppm": 26, "Potassium_K_ppm": 195,
+    "Organic_Matter": 2.9, "Texture": "Clay Loam", "Soil_Color": "Brown",
+    "Bulk_Density": 1.42, "Moisture": 24, "Porosity": 40, "WHC": 42,
+    "CEC": 20, "EC": 0.52, "Depth": 28,
+    "Temperature": 28, "Humidity": 65, "Precipitation": 9.2,
+    "Evapotranspiration": 5.0, "Root_Zone_Moisture": 0.37, "Water_Table_Depth": 6,
+    "Soil_Depth": 1.4, "soil_type_label": "Alluvial"
+  },
+  "Agra": {
+    "state": "Uttar Pradesh", "lat": 27.18, "lon": 78.02,
+    "pH": 7.5, "Nitrogen_N_ppm": 110, "Phosphorus_P_ppm": 22, "Potassium_K_ppm": 185,
+    "Organic_Matter": 2.5, "Texture": "Sandy Loam", "Soil_Color": "Light Brown",
+    "Bulk_Density": 1.45, "Moisture": 18, "Porosity": 38, "WHC": 32,
+    "CEC": 15, "EC": 0.6, "Depth": 25,
+    "Temperature": 29, "Humidity": 55, "Precipitation": 5.5,
+    "Evapotranspiration": 5.5, "Root_Zone_Moisture": 0.30, "Water_Table_Depth": 10,
+    "Soil_Depth": 1.2, "soil_type_label": "Alluvial"
+  },
+  "Kanpur": {
+    "state": "Uttar Pradesh", "lat": 26.45, "lon": 80.35,
+    "pH": 7.3, "Nitrogen_N_ppm": 120, "Phosphorus_P_ppm": 25, "Potassium_K_ppm": 200,
+    "Organic_Matter": 2.8, "Texture": "Loam", "Soil_Color": "Brown",
+    "Bulk_Density": 1.40, "Moisture": 20, "Porosity": 41, "WHC": 36,
+    "CEC": 17, "EC": 0.48, "Depth": 28,
+    "Temperature": 28, "Humidity": 60, "Precipitation": 7.0,
+    "Evapotranspiration": 5.0, "Root_Zone_Moisture": 0.33, "Water_Table_Depth": 9,
+    "Soil_Depth": 1.4, "soil_type_label": "Alluvial"
+  },
+  "Patna": {
+    "state": "Bihar", "lat": 25.6, "lon": 85.1,
+    "pH": 6.8, "Nitrogen_N_ppm": 140, "Phosphorus_P_ppm": 30, "Potassium_K_ppm": 220,
+    "Organic_Matter": 3.5, "Texture": "Clay Loam", "Soil_Color": "Dark Brown",
+    "Bulk_Density": 1.35, "Moisture": 28, "Porosity": 45, "WHC": 44,
+    "CEC": 22, "EC": 0.42, "Depth": 32,
+    "Temperature": 28, "Humidity": 70, "Precipitation": 10.5,
+    "Evapotranspiration": 4.5, "Root_Zone_Moisture": 0.40, "Water_Table_Depth": 5,
+    "Soil_Depth": 1.6, "soil_type_label": "Alluvial"
+  },
+  "Muzaffarpur": {
+    "state": "Bihar", "lat": 26.12, "lon": 85.39,
+    "pH": 6.6, "Nitrogen_N_ppm": 145, "Phosphorus_P_ppm": 32, "Potassium_K_ppm": 230,
+    "Organic_Matter": 3.8, "Texture": "Clay", "Soil_Color": "Dark Brown",
+    "Bulk_Density": 1.32, "Moisture": 30, "Porosity": 47, "WHC": 46,
+    "CEC": 24, "EC": 0.38, "Depth": 35,
+    "Temperature": 27, "Humidity": 72, "Precipitation": 11.0,
+    "Evapotranspiration": 4.3, "Root_Zone_Moisture": 0.42, "Water_Table_Depth": 4,
+    "Soil_Depth": 1.7, "soil_type_label": "Alluvial"
+  },
+  "Gaya": {
+    "state": "Bihar", "lat": 24.75, "lon": 85.01,
+    "pH": 6.9, "Nitrogen_N_ppm": 115, "Phosphorus_P_ppm": 22, "Potassium_K_ppm": 190,
+    "Organic_Matter": 2.6, "Texture": "Sandy Loam", "Soil_Color": "Reddish Brown",
+    "Bulk_Density": 1.44, "Moisture": 20, "Porosity": 39, "WHC": 34,
+    "CEC": 16, "EC": 0.55, "Depth": 25,
+    "Temperature": 29, "Humidity": 60, "Precipitation": 7.5,
+    "Evapotranspiration": 5.2, "Root_Zone_Moisture": 0.32, "Water_Table_Depth": 8,
+    "Soil_Depth": 1.2, "soil_type_label": "Alluvial"
+  },
+  "Ludhiana": {
+    "state": "Punjab", "lat": 30.91, "lon": 75.86,
+    "pH": 7.8, "Nitrogen_N_ppm": 150, "Phosphorus_P_ppm": 35, "Potassium_K_ppm": 260,
+    "Organic_Matter": 3.0, "Texture": "Loam", "Soil_Color": "Brown",
+    "Bulk_Density": 1.40, "Moisture": 22, "Porosity": 42, "WHC": 38,
+    "CEC": 19, "EC": 0.55, "Depth": 30,
+    "Temperature": 24, "Humidity": 58, "Precipitation": 5.5,
+    "Evapotranspiration": 4.5, "Root_Zone_Moisture": 0.34, "Water_Table_Depth": 7,
+    "Soil_Depth": 1.5, "soil_type_label": "Alluvial"
+  },
+  "Amritsar": {
+    "state": "Punjab", "lat": 31.63, "lon": 74.87,
+    "pH": 7.9, "Nitrogen_N_ppm": 140, "Phosphorus_P_ppm": 32, "Potassium_K_ppm": 245,
+    "Organic_Matter": 2.8, "Texture": "Sandy Loam", "Soil_Color": "Light Brown",
+    "Bulk_Density": 1.43, "Moisture": 20, "Porosity": 40, "WHC": 35,
+    "CEC": 17, "EC": 0.62, "Depth": 28,
+    "Temperature": 23, "Humidity": 55, "Precipitation": 4.8,
+    "Evapotranspiration": 4.8, "Root_Zone_Moisture": 0.31, "Water_Table_Depth": 9,
+    "Soil_Depth": 1.3, "soil_type_label": "Alluvial"
+  },
+  "Bathinda": {
+    "state": "Punjab", "lat": 30.21, "lon": 74.95,
+    "pH": 8.0, "Nitrogen_N_ppm": 105, "Phosphorus_P_ppm": 20, "Potassium_K_ppm": 200,
+    "Organic_Matter": 2.2, "Texture": "Sandy Loam", "Soil_Color": "Yellowish Brown",
+    "Bulk_Density": 1.48, "Moisture": 16, "Porosity": 36, "WHC": 30,
+    "CEC": 14, "EC": 0.75, "Depth": 25,
+    "Temperature": 26, "Humidity": 50, "Precipitation": 3.5,
+    "Evapotranspiration": 5.5, "Root_Zone_Moisture": 0.28, "Water_Table_Depth": 12,
+    "Soil_Depth": 1.1, "soil_type_label": "Alluvial"
+  },
+  "Karnal": {
+    "state": "Haryana", "lat": 29.69, "lon": 76.98,
+    "pH": 7.6, "Nitrogen_N_ppm": 135, "Phosphorus_P_ppm": 30, "Potassium_K_ppm": 225,
+    "Organic_Matter": 2.9, "Texture": "Loam", "Soil_Color": "Brown",
+    "Bulk_Density": 1.40, "Moisture": 22, "Porosity": 41, "WHC": 37,
+    "CEC": 18, "EC": 0.50, "Depth": 30,
+    "Temperature": 25, "Humidity": 60, "Precipitation": 6.0,
+    "Evapotranspiration": 4.6, "Root_Zone_Moisture": 0.34, "Water_Table_Depth": 7,
+    "Soil_Depth": 1.4, "soil_type_label": "Alluvial"
+  },
+  "Hisar": {
+    "state": "Haryana", "lat": 29.15, "lon": 75.72,
+    "pH": 7.8, "Nitrogen_N_ppm": 110, "Phosphorus_P_ppm": 22, "Potassium_K_ppm": 195,
+    "Organic_Matter": 2.4, "Texture": "Sandy Loam", "Soil_Color": "Yellowish Brown",
+    "Bulk_Density": 1.46, "Moisture": 17, "Porosity": 37, "WHC": 31,
+    "CEC": 15, "EC": 0.65, "Depth": 25,
+    "Temperature": 27, "Humidity": 52, "Precipitation": 4.2,
+    "Evapotranspiration": 5.3, "Root_Zone_Moisture": 0.29, "Water_Table_Depth": 11,
+    "Soil_Depth": 1.2, "soil_type_label": "Alluvial"
+  },
+  "Rohtak": {
+    "state": "Haryana", "lat": 28.90, "lon": 76.57,
+    "pH": 7.5, "Nitrogen_N_ppm": 120, "Phosphorus_P_ppm": 25, "Potassium_K_ppm": 210,
+    "Organic_Matter": 2.7, "Texture": "Loam", "Soil_Color": "Brown",
+    "Bulk_Density": 1.42, "Moisture": 20, "Porosity": 40, "WHC": 35,
+    "CEC": 17, "EC": 0.55, "Depth": 28,
+    "Temperature": 26, "Humidity": 58, "Precipitation": 5.5,
+    "Evapotranspiration": 5.0, "Root_Zone_Moisture": 0.32, "Water_Table_Depth": 9,
+    "Soil_Depth": 1.3, "soil_type_label": "Alluvial"
+  },
+  "Indore": {
+    "state": "Madhya Pradesh", "lat": 22.72, "lon": 75.86,
+    "pH": 7.2, "Nitrogen_N_ppm": 120, "Phosphorus_P_ppm": 28, "Potassium_K_ppm": 280,
+    "Organic_Matter": 3.5, "Texture": "Clay", "Soil_Color": "Black",
+    "Bulk_Density": 1.30, "Moisture": 28, "Porosity": 48, "WHC": 50,
+    "CEC": 35, "EC": 0.40, "Depth": 35,
+    "Temperature": 26, "Humidity": 58, "Precipitation": 8.0,
+    "Evapotranspiration": 4.5, "Root_Zone_Moisture": 0.38, "Water_Table_Depth": 8,
+    "Soil_Depth": 1.8, "soil_type_label": "Black"
+  },
+  "Bhopal": {
+    "state": "Madhya Pradesh", "lat": 23.26, "lon": 77.41,
+    "pH": 7.0, "Nitrogen_N_ppm": 125, "Phosphorus_P_ppm": 26, "Potassium_K_ppm": 260,
+    "Organic_Matter": 3.2, "Texture": "Clay Loam", "Soil_Color": "Dark Brown",
+    "Bulk_Density": 1.33, "Moisture": 26, "Porosity": 46, "WHC": 48,
+    "CEC": 30, "EC": 0.42, "Depth": 33,
+    "Temperature": 27, "Humidity": 60, "Precipitation": 9.0,
+    "Evapotranspiration": 4.6, "Root_Zone_Moisture": 0.36, "Water_Table_Depth": 7,
+    "Soil_Depth": 1.6, "soil_type_label": "Black"
+  },
+  "Jabalpur": {
+    "state": "Madhya Pradesh", "lat": 23.18, "lon": 79.95,
+    "pH": 6.8, "Nitrogen_N_ppm": 130, "Phosphorus_P_ppm": 24, "Potassium_K_ppm": 240,
+    "Organic_Matter": 3.0, "Texture": "Clay Loam", "Soil_Color": "Dark Brown",
+    "Bulk_Density": 1.35, "Moisture": 25, "Porosity": 44, "WHC": 45,
+    "CEC": 28, "EC": 0.45, "Depth": 32,
+    "Temperature": 27, "Humidity": 62, "Precipitation": 10.0,
+    "Evapotranspiration": 4.4, "Root_Zone_Moisture": 0.37, "Water_Table_Depth": 6,
+    "Soil_Depth": 1.5, "soil_type_label": "Black"
+  },
+  "Sagar": {
+    "state": "Madhya Pradesh", "lat": 23.84, "lon": 78.74,
+    "pH": 7.1, "Nitrogen_N_ppm": 115, "Phosphorus_P_ppm": 22, "Potassium_K_ppm": 250,
+    "Organic_Matter": 2.8, "Texture": "Clay", "Soil_Color": "Black",
+    "Bulk_Density": 1.32, "Moisture": 27, "Porosity": 47, "WHC": 49,
+    "CEC": 33, "EC": 0.43, "Depth": 34,
+    "Temperature": 26, "Humidity": 57, "Precipitation": 7.5,
+    "Evapotranspiration": 4.7, "Root_Zone_Moisture": 0.36, "Water_Table_Depth": 9,
+    "Soil_Depth": 1.7, "soil_type_label": "Black"
+  },
+  "Jaipur": {
+    "state": "Rajasthan", "lat": 26.92, "lon": 75.79,
+    "pH": 8.0, "Nitrogen_N_ppm": 85, "Phosphorus_P_ppm": 15, "Potassium_K_ppm": 170,
+    "Organic_Matter": 1.8, "Texture": "Sandy", "Soil_Color": "Yellowish Brown",
+    "Bulk_Density": 1.55, "Moisture": 12, "Porosity": 34, "WHC": 24,
+    "CEC": 10, "EC": 0.80, "Depth": 20,
+    "Temperature": 30, "Humidity": 42, "Precipitation": 3.0,
+    "Evapotranspiration": 6.0, "Root_Zone_Moisture": 0.22, "Water_Table_Depth": 18,
+    "Soil_Depth": 0.9, "soil_type_label": "Desert"
+  },
+  "Jodhpur": {
+    "state": "Rajasthan", "lat": 26.29, "lon": 73.02,
+    "pH": 8.2, "Nitrogen_N_ppm": 65, "Phosphorus_P_ppm": 10, "Potassium_K_ppm": 150,
+    "Organic_Matter": 1.2, "Texture": "Sandy", "Soil_Color": "Pale Brown",
+    "Bulk_Density": 1.60, "Moisture": 8, "Porosity": 32, "WHC": 18,
+    "CEC": 8, "EC": 1.0, "Depth": 18,
+    "Temperature": 32, "Humidity": 35, "Precipitation": 1.8,
+    "Evapotranspiration": 6.5, "Root_Zone_Moisture": 0.18, "Water_Table_Depth": 25,
+    "Soil_Depth": 0.7, "soil_type_label": "Desert"
+  },
+  "Kota": {
+    "state": "Rajasthan", "lat": 25.18, "lon": 75.86,
+    "pH": 7.6, "Nitrogen_N_ppm": 100, "Phosphorus_P_ppm": 20, "Potassium_K_ppm": 200,
+    "Organic_Matter": 2.2, "Texture": "Loam", "Soil_Color": "Brown",
+    "Bulk_Density": 1.45, "Moisture": 16, "Porosity": 38, "WHC": 30,
+    "CEC": 14, "EC": 0.60, "Depth": 24,
+    "Temperature": 29, "Humidity": 48, "Precipitation": 4.5,
+    "Evapotranspiration": 5.5, "Root_Zone_Moisture": 0.27, "Water_Table_Depth": 14,
+    "Soil_Depth": 1.1, "soil_type_label": "Alluvial"
+  },
+  "Nagpur": {
+    "state": "Maharashtra", "lat": 21.15, "lon": 79.09,
+    "pH": 7.0, "Nitrogen_N_ppm": 115, "Phosphorus_P_ppm": 25, "Potassium_K_ppm": 270,
+    "Organic_Matter": 3.2, "Texture": "Clay", "Soil_Color": "Black",
+    "Bulk_Density": 1.30, "Moisture": 28, "Porosity": 48, "WHC": 52,
+    "CEC": 38, "EC": 0.38, "Depth": 36,
+    "Temperature": 28, "Humidity": 55, "Precipitation": 7.5,
+    "Evapotranspiration": 4.8, "Root_Zone_Moisture": 0.38, "Water_Table_Depth": 8,
+    "Soil_Depth": 1.8, "soil_type_label": "Black"
+  },
+  "Pune": {
+    "state": "Maharashtra", "lat": 18.52, "lon": 73.86,
+    "pH": 6.8, "Nitrogen_N_ppm": 110, "Phosphorus_P_ppm": 22, "Potassium_K_ppm": 240,
+    "Organic_Matter": 2.8, "Texture": "Clay Loam", "Soil_Color": "Reddish Brown",
+    "Bulk_Density": 1.36, "Moisture": 24, "Porosity": 43, "WHC": 42,
+    "CEC": 25, "EC": 0.45, "Depth": 30,
+    "Temperature": 26, "Humidity": 62, "Precipitation": 9.5,
+    "Evapotranspiration": 4.5, "Root_Zone_Moisture": 0.35, "Water_Table_Depth": 7,
+    "Soil_Depth": 1.4, "soil_type_label": "Laterite"
+  },
+  "Nashik": {
+    "state": "Maharashtra", "lat": 20.00, "lon": 73.79,
+    "pH": 6.6, "Nitrogen_N_ppm": 105, "Phosphorus_P_ppm": 20, "Potassium_K_ppm": 220,
+    "Organic_Matter": 2.5, "Texture": "Loam", "Soil_Color": "Red",
+    "Bulk_Density": 1.40, "Moisture": 20, "Porosity": 40, "WHC": 36,
+    "CEC": 20, "EC": 0.50, "Depth": 28,
+    "Temperature": 27, "Humidity": 58, "Precipitation": 7.0,
+    "Evapotranspiration": 4.8, "Root_Zone_Moisture": 0.33, "Water_Table_Depth": 9,
+    "Soil_Depth": 1.2, "soil_type_label": "Laterite"
+  },
+  "Ahmednagar": {
+    "state": "Maharashtra", "lat": 19.09, "lon": 74.74,
+    "pH": 7.2, "Nitrogen_N_ppm": 100, "Phosphorus_P_ppm": 18, "Potassium_K_ppm": 250,
+    "Organic_Matter": 2.6, "Texture": "Clay", "Soil_Color": "Dark Brown",
+    "Bulk_Density": 1.34, "Moisture": 22, "Porosity": 44, "WHC": 45,
+    "CEC": 30, "EC": 0.42, "Depth": 32,
+    "Temperature": 28, "Humidity": 55, "Precipitation": 5.5,
+    "Evapotranspiration": 5.0, "Root_Zone_Moisture": 0.34, "Water_Table_Depth": 10,
+    "Soil_Depth": 1.5, "soil_type_label": "Black"
+  },
+  "Ahmedabad": {
+    "state": "Gujarat", "lat": 23.02, "lon": 72.57,
+    "pH": 7.5, "Nitrogen_N_ppm": 95, "Phosphorus_P_ppm": 18, "Potassium_K_ppm": 210,
+    "Organic_Matter": 2.2, "Texture": "Sandy Loam", "Soil_Color": "Yellowish Brown",
+    "Bulk_Density": 1.48, "Moisture": 16, "Porosity": 37, "WHC": 30,
+    "CEC": 14, "EC": 0.65, "Depth": 24,
+    "Temperature": 29, "Humidity": 50, "Precipitation": 4.5,
+    "Evapotranspiration": 5.5, "Root_Zone_Moisture": 0.28, "Water_Table_Depth": 12,
+    "Soil_Depth": 1.1, "soil_type_label": "Alluvial"
+  },
+  "Rajkot": {
+    "state": "Gujarat", "lat": 22.30, "lon": 70.80,
+    "pH": 7.8, "Nitrogen_N_ppm": 90, "Phosphorus_P_ppm": 16, "Potassium_K_ppm": 230,
+    "Organic_Matter": 2.0, "Texture": "Clay Loam", "Soil_Color": "Black",
+    "Bulk_Density": 1.38, "Moisture": 20, "Porosity": 42, "WHC": 40,
+    "CEC": 28, "EC": 0.55, "Depth": 30,
+    "Temperature": 28, "Humidity": 52, "Precipitation": 4.0,
+    "Evapotranspiration": 5.2, "Root_Zone_Moisture": 0.30, "Water_Table_Depth": 10,
+    "Soil_Depth": 1.3, "soil_type_label": "Black"
+  },
+  "Junagadh": {
+    "state": "Gujarat", "lat": 21.52, "lon": 70.46,
+    "pH": 7.4, "Nitrogen_N_ppm": 105, "Phosphorus_P_ppm": 22, "Potassium_K_ppm": 240,
+    "Organic_Matter": 2.6, "Texture": "Clay", "Soil_Color": "Dark Brown",
+    "Bulk_Density": 1.35, "Moisture": 24, "Porosity": 45, "WHC": 44,
+    "CEC": 30, "EC": 0.48, "Depth": 32,
+    "Temperature": 27, "Humidity": 60, "Precipitation": 6.5,
+    "Evapotranspiration": 4.8, "Root_Zone_Moisture": 0.35, "Water_Table_Depth": 8,
+    "Soil_Depth": 1.5, "soil_type_label": "Black"
+  },
+  "Belgaum": {
+    "state": "Karnataka", "lat": 15.85, "lon": 74.50,
+    "pH": 6.5, "Nitrogen_N_ppm": 110, "Phosphorus_P_ppm": 20, "Potassium_K_ppm": 210,
+    "Organic_Matter": 2.8, "Texture": "Clay Loam", "Soil_Color": "Red",
+    "Bulk_Density": 1.38, "Moisture": 22, "Porosity": 42, "WHC": 40,
+    "CEC": 22, "EC": 0.45, "Depth": 30,
+    "Temperature": 26, "Humidity": 65, "Precipitation": 9.0,
+    "Evapotranspiration": 4.5, "Root_Zone_Moisture": 0.36, "Water_Table_Depth": 7,
+    "Soil_Depth": 1.3, "soil_type_label": "Red"
+  },
+  "Dharwad": {
+    "state": "Karnataka", "lat": 15.46, "lon": 75.01,
+    "pH": 6.8, "Nitrogen_N_ppm": 115, "Phosphorus_P_ppm": 22, "Potassium_K_ppm": 230,
+    "Organic_Matter": 3.0, "Texture": "Clay", "Soil_Color": "Black",
+    "Bulk_Density": 1.32, "Moisture": 26, "Porosity": 46, "WHC": 48,
+    "CEC": 32, "EC": 0.40, "Depth": 34,
+    "Temperature": 26, "Humidity": 62, "Precipitation": 8.0,
+    "Evapotranspiration": 4.6, "Root_Zone_Moisture": 0.37, "Water_Table_Depth": 8,
+    "Soil_Depth": 1.6, "soil_type_label": "Black"
+  },
+  "Raichur": {
+    "state": "Karnataka", "lat": 16.21, "lon": 77.36,
+    "pH": 7.5, "Nitrogen_N_ppm": 95, "Phosphorus_P_ppm": 18, "Potassium_K_ppm": 250,
+    "Organic_Matter": 2.4, "Texture": "Clay", "Soil_Color": "Black",
+    "Bulk_Density": 1.34, "Moisture": 24, "Porosity": 44, "WHC": 46,
+    "CEC": 34, "EC": 0.50, "Depth": 32,
+    "Temperature": 29, "Humidity": 52, "Precipitation": 5.0,
+    "Evapotranspiration": 5.2, "Root_Zone_Moisture": 0.32, "Water_Table_Depth": 10,
+    "Soil_Depth": 1.5, "soil_type_label": "Black"
+  },
+  "Guntur": {
+    "state": "Andhra Pradesh", "lat": 16.31, "lon": 80.44,
+    "pH": 7.0, "Nitrogen_N_ppm": 120, "Phosphorus_P_ppm": 28, "Potassium_K_ppm": 220,
+    "Organic_Matter": 3.0, "Texture": "Clay Loam", "Soil_Color": "Black",
+    "Bulk_Density": 1.35, "Moisture": 26, "Porosity": 44, "WHC": 45,
+    "CEC": 28, "EC": 0.42, "Depth": 32,
+    "Temperature": 29, "Humidity": 68, "Precipitation": 8.5,
+    "Evapotranspiration": 4.8, "Root_Zone_Moisture": 0.38, "Water_Table_Depth": 6,
+    "Soil_Depth": 1.5, "soil_type_label": "Black"
+  },
+  "Kurnool": {
+    "state": "Andhra Pradesh", "lat": 15.83, "lon": 78.04,
+    "pH": 7.2, "Nitrogen_N_ppm": 100, "Phosphorus_P_ppm": 20, "Potassium_K_ppm": 240,
+    "Organic_Matter": 2.5, "Texture": "Clay", "Soil_Color": "Dark Brown",
+    "Bulk_Density": 1.36, "Moisture": 22, "Porosity": 42, "WHC": 43,
+    "CEC": 30, "EC": 0.48, "Depth": 30,
+    "Temperature": 30, "Humidity": 55, "Precipitation": 5.5,
+    "Evapotranspiration": 5.2, "Root_Zone_Moisture": 0.33, "Water_Table_Depth": 9,
+    "Soil_Depth": 1.4, "soil_type_label": "Black"
+  },
+  "East Godavari": {
+    "state": "Andhra Pradesh", "lat": 17.00, "lon": 81.80,
+    "pH": 6.5, "Nitrogen_N_ppm": 140, "Phosphorus_P_ppm": 30, "Potassium_K_ppm": 200,
+    "Organic_Matter": 3.5, "Texture": "Clay Loam", "Soil_Color": "Dark Brown",
+    "Bulk_Density": 1.32, "Moisture": 30, "Porosity": 46, "WHC": 48,
+    "CEC": 26, "EC": 0.38, "Depth": 35,
+    "Temperature": 28, "Humidity": 75, "Precipitation": 12.0,
+    "Evapotranspiration": 4.2, "Root_Zone_Moisture": 0.42, "Water_Table_Depth": 4,
+    "Soil_Depth": 1.6, "soil_type_label": "Alluvial"
+  },
+  "Thanjavur": {
+    "state": "Tamil Nadu", "lat": 10.79, "lon": 79.14,
+    "pH": 6.8, "Nitrogen_N_ppm": 135, "Phosphorus_P_ppm": 28, "Potassium_K_ppm": 210,
+    "Organic_Matter": 3.2, "Texture": "Clay", "Soil_Color": "Dark Brown",
+    "Bulk_Density": 1.33, "Moisture": 28, "Porosity": 46, "WHC": 48,
+    "CEC": 28, "EC": 0.40, "Depth": 34,
+    "Temperature": 30, "Humidity": 72, "Precipitation": 10.0,
+    "Evapotranspiration": 4.5, "Root_Zone_Moisture": 0.40, "Water_Table_Depth": 5,
+    "Soil_Depth": 1.6, "soil_type_label": "Alluvial"
+  },
+  "Coimbatore": {
+    "state": "Tamil Nadu", "lat": 11.00, "lon": 76.96,
+    "pH": 6.5, "Nitrogen_N_ppm": 100, "Phosphorus_P_ppm": 18, "Potassium_K_ppm": 190,
+    "Organic_Matter": 2.4, "Texture": "Sandy Loam", "Soil_Color": "Red",
+    "Bulk_Density": 1.42, "Moisture": 18, "Porosity": 38, "WHC": 32,
+    "CEC": 16, "EC": 0.55, "Depth": 25,
+    "Temperature": 28, "Humidity": 60, "Precipitation": 5.5,
+    "Evapotranspiration": 5.0, "Root_Zone_Moisture": 0.30, "Water_Table_Depth": 10,
+    "Soil_Depth": 1.2, "soil_type_label": "Red"
+  },
+  "Madurai": {
+    "state": "Tamil Nadu", "lat": 9.92, "lon": 78.12,
+    "pH": 7.0, "Nitrogen_N_ppm": 105, "Phosphorus_P_ppm": 20, "Potassium_K_ppm": 200,
+    "Organic_Matter": 2.6, "Texture": "Loam", "Soil_Color": "Reddish Brown",
+    "Bulk_Density": 1.40, "Moisture": 20, "Porosity": 40, "WHC": 35,
+    "CEC": 18, "EC": 0.50, "Depth": 27,
+    "Temperature": 30, "Humidity": 65, "Precipitation": 6.0,
+    "Evapotranspiration": 5.0, "Root_Zone_Moisture": 0.32, "Water_Table_Depth": 8,
+    "Soil_Depth": 1.3, "soil_type_label": "Red"
+  },
+  "Bardhaman": {
+    "state": "West Bengal", "lat": 23.23, "lon": 87.86,
+    "pH": 6.2, "Nitrogen_N_ppm": 145, "Phosphorus_P_ppm": 32, "Potassium_K_ppm": 210,
+    "Organic_Matter": 3.8, "Texture": "Clay Loam", "Soil_Color": "Dark Brown",
+    "Bulk_Density": 1.30, "Moisture": 30, "Porosity": 48, "WHC": 48,
+    "CEC": 24, "EC": 0.35, "Depth": 35,
+    "Temperature": 27, "Humidity": 75, "Precipitation": 12.0,
+    "Evapotranspiration": 4.2, "Root_Zone_Moisture": 0.42, "Water_Table_Depth": 4,
+    "Soil_Depth": 1.7, "soil_type_label": "Alluvial"
+  },
+  "Hooghly": {
+    "state": "West Bengal", "lat": 22.91, "lon": 88.39,
+    "pH": 6.0, "Nitrogen_N_ppm": 150, "Phosphorus_P_ppm": 35, "Potassium_K_ppm": 220,
+    "Organic_Matter": 4.0, "Texture": "Clay", "Soil_Color": "Dark Brown",
+    "Bulk_Density": 1.28, "Moisture": 32, "Porosity": 50, "WHC": 50,
+    "CEC": 26, "EC": 0.32, "Depth": 36,
+    "Temperature": 28, "Humidity": 78, "Precipitation": 13.0,
+    "Evapotranspiration": 4.0, "Root_Zone_Moisture": 0.45, "Water_Table_Depth": 3,
+    "Soil_Depth": 1.8, "soil_type_label": "Alluvial"
+  },
+  "Nadia": {
+    "state": "West Bengal", "lat": 23.47, "lon": 88.55,
+    "pH": 6.3, "Nitrogen_N_ppm": 140, "Phosphorus_P_ppm": 30, "Potassium_K_ppm": 205,
+    "Organic_Matter": 3.5, "Texture": "Clay Loam", "Soil_Color": "Brown",
+    "Bulk_Density": 1.32, "Moisture": 28, "Porosity": 47, "WHC": 46,
+    "CEC": 23, "EC": 0.36, "Depth": 34,
+    "Temperature": 27, "Humidity": 74, "Precipitation": 11.5,
+    "Evapotranspiration": 4.3, "Root_Zone_Moisture": 0.41, "Water_Table_Depth": 4,
+    "Soil_Depth": 1.6, "soil_type_label": "Alluvial"
+  },
+  "Cuttack": {
+    "state": "Odisha", "lat": 20.46, "lon": 85.88,
+    "pH": 6.0, "Nitrogen_N_ppm": 130, "Phosphorus_P_ppm": 25, "Potassium_K_ppm": 195,
+    "Organic_Matter": 3.2, "Texture": "Clay Loam", "Soil_Color": "Reddish Brown",
+    "Bulk_Density": 1.34, "Moisture": 28, "Porosity": 45, "WHC": 44,
+    "CEC": 22, "EC": 0.40, "Depth": 32,
+    "Temperature": 28, "Humidity": 72, "Precipitation": 11.0,
+    "Evapotranspiration": 4.4, "Root_Zone_Moisture": 0.40, "Water_Table_Depth": 5,
+    "Soil_Depth": 1.5, "soil_type_label": "Alluvial"
+  },
+  "Sambalpur": {
+    "state": "Odisha", "lat": 21.47, "lon": 83.97,
+    "pH": 5.8, "Nitrogen_N_ppm": 110, "Phosphorus_P_ppm": 18, "Potassium_K_ppm": 180,
+    "Organic_Matter": 2.8, "Texture": "Sandy Loam", "Soil_Color": "Red",
+    "Bulk_Density": 1.42, "Moisture": 22, "Porosity": 40, "WHC": 35,
+    "CEC": 16, "EC": 0.48, "Depth": 26,
+    "Temperature": 28, "Humidity": 65, "Precipitation": 9.0,
+    "Evapotranspiration": 4.8, "Root_Zone_Moisture": 0.34, "Water_Table_Depth": 8,
+    "Soil_Depth": 1.2, "soil_type_label": "Red"
+  },
+  "Kalahandi": {
+    "state": "Odisha", "lat": 19.91, "lon": 83.17,
+    "pH": 5.6, "Nitrogen_N_ppm": 100, "Phosphorus_P_ppm": 15, "Potassium_K_ppm": 170,
+    "Organic_Matter": 2.5, "Texture": "Loam", "Soil_Color": "Red",
+    "Bulk_Density": 1.45, "Moisture": 20, "Porosity": 38, "WHC": 32,
+    "CEC": 14, "EC": 0.52, "Depth": 24,
+    "Temperature": 29, "Humidity": 62, "Precipitation": 8.0,
+    "Evapotranspiration": 5.0, "Root_Zone_Moisture": 0.32, "Water_Table_Depth": 9,
+    "Soil_Depth": 1.1, "soil_type_label": "Red"
+  },
+  "Raipur": {
+    "state": "Chhattisgarh", "lat": 21.25, "lon": 81.63,
+    "pH": 6.2, "Nitrogen_N_ppm": 120, "Phosphorus_P_ppm": 22, "Potassium_K_ppm": 200,
+    "Organic_Matter": 3.0, "Texture": "Clay Loam", "Soil_Color": "Red",
+    "Bulk_Density": 1.36, "Moisture": 25, "Porosity": 43, "WHC": 42,
+    "CEC": 22, "EC": 0.42, "Depth": 30,
+    "Temperature": 28, "Humidity": 65, "Precipitation": 10.0,
+    "Evapotranspiration": 4.5, "Root_Zone_Moisture": 0.37, "Water_Table_Depth": 6,
+    "Soil_Depth": 1.4, "soil_type_label": "Red"
+  },
+  "Durg": {
+    "state": "Chhattisgarh", "lat": 21.19, "lon": 81.28,
+    "pH": 6.4, "Nitrogen_N_ppm": 115, "Phosphorus_P_ppm": 20, "Potassium_K_ppm": 210,
+    "Organic_Matter": 2.8, "Texture": "Clay", "Soil_Color": "Reddish Brown",
+    "Bulk_Density": 1.34, "Moisture": 24, "Porosity": 44, "WHC": 44,
+    "CEC": 24, "EC": 0.40, "Depth": 32,
+    "Temperature": 27, "Humidity": 63, "Precipitation": 9.5,
+    "Evapotranspiration": 4.6, "Root_Zone_Moisture": 0.36, "Water_Table_Depth": 7,
+    "Soil_Depth": 1.5, "soil_type_label": "Red"
+  },
+  "Bilaspur": {
+    "state": "Chhattisgarh", "lat": 22.08, "lon": 82.15,
+    "pH": 6.0, "Nitrogen_N_ppm": 125, "Phosphorus_P_ppm": 24, "Potassium_K_ppm": 195,
+    "Organic_Matter": 3.2, "Texture": "Loam", "Soil_Color": "Dark Brown",
+    "Bulk_Density": 1.35, "Moisture": 26, "Porosity": 45, "WHC": 43,
+    "CEC": 22, "EC": 0.38, "Depth": 31,
+    "Temperature": 27, "Humidity": 66, "Precipitation": 10.5,
+    "Evapotranspiration": 4.4, "Root_Zone_Moisture": 0.38, "Water_Table_Depth": 6,
+    "Soil_Depth": 1.5, "soil_type_label": "Laterite"
+  },
+  "Ranchi": {
+    "state": "Jharkhand", "lat": 23.34, "lon": 85.31,
+    "pH": 5.8, "Nitrogen_N_ppm": 105, "Phosphorus_P_ppm": 18, "Potassium_K_ppm": 175,
+    "Organic_Matter": 2.8, "Texture": "Sandy Loam", "Soil_Color": "Red",
+    "Bulk_Density": 1.44, "Moisture": 20, "Porosity": 38, "WHC": 32,
+    "CEC": 14, "EC": 0.50, "Depth": 24,
+    "Temperature": 25, "Humidity": 62, "Precipitation": 9.0,
+    "Evapotranspiration": 4.5, "Root_Zone_Moisture": 0.32, "Water_Table_Depth": 8,
+    "Soil_Depth": 1.1, "soil_type_label": "Red"
+  },
+  "Dhanbad": {
+    "state": "Jharkhand", "lat": 23.79, "lon": 86.43,
+    "pH": 5.5, "Nitrogen_N_ppm": 95, "Phosphorus_P_ppm": 15, "Potassium_K_ppm": 165,
+    "Organic_Matter": 2.5, "Texture": "Sandy Loam", "Soil_Color": "Reddish Brown",
+    "Bulk_Density": 1.46, "Moisture": 18, "Porosity": 36, "WHC": 30,
+    "CEC": 12, "EC": 0.55, "Depth": 22,
+    "Temperature": 26, "Humidity": 60, "Precipitation": 8.5,
+    "Evapotranspiration": 4.8, "Root_Zone_Moisture": 0.30, "Water_Table_Depth": 10,
+    "Soil_Depth": 1.0, "soil_type_label": "Laterite"
+  },
+  "Dumka": {
+    "state": "Jharkhand", "lat": 24.27, "lon": 87.25,
+    "pH": 5.6, "Nitrogen_N_ppm": 100, "Phosphorus_P_ppm": 16, "Potassium_K_ppm": 170,
+    "Organic_Matter": 2.6, "Texture": "Loam", "Soil_Color": "Reddish Brown",
+    "Bulk_Density": 1.44, "Moisture": 20, "Porosity": 38, "WHC": 33,
+    "CEC": 14, "EC": 0.52, "Depth": 24,
+    "Temperature": 26, "Humidity": 63, "Precipitation": 9.0,
+    "Evapotranspiration": 4.6, "Root_Zone_Moisture": 0.33, "Water_Table_Depth": 8,
+    "Soil_Depth": 1.1, "soil_type_label": "Red"
+  },
+  "Gorakhpur": {
+    "state": "Uttar Pradesh", "lat": 26.76, "lon": 83.37,
+    "pH": 6.8, "Nitrogen_N_ppm": 135, "Phosphorus_P_ppm": 28, "Potassium_K_ppm": 215,
+    "Organic_Matter": 3.3, "Texture": "Clay Loam", "Soil_Color": "Dark Brown",
+    "Bulk_Density": 1.34, "Moisture": 26, "Porosity": 44, "WHC": 43,
+    "CEC": 21, "EC": 0.40, "Depth": 32,
+    "Temperature": 27, "Humidity": 68, "Precipitation": 10.5,
+    "Evapotranspiration": 4.5, "Root_Zone_Moisture": 0.38, "Water_Table_Depth": 5,
+    "Soil_Depth": 1.5, "soil_type_label": "Alluvial"
+  },
+  "Patiala": {
+    "state": "Punjab", "lat": 30.34, "lon": 76.39,
+    "pH": 7.7, "Nitrogen_N_ppm": 145, "Phosphorus_P_ppm": 34, "Potassium_K_ppm": 250,
+    "Organic_Matter": 3.0, "Texture": "Loam", "Soil_Color": "Brown",
+    "Bulk_Density": 1.38, "Moisture": 22, "Porosity": 43, "WHC": 39,
+    "CEC": 19, "EC": 0.52, "Depth": 30,
+    "Temperature": 24, "Humidity": 58, "Precipitation": 5.8,
+    "Evapotranspiration": 4.6, "Root_Zone_Moisture": 0.34, "Water_Table_Depth": 7,
+    "Soil_Depth": 1.4, "soil_type_label": "Alluvial"
+  },
+  "Bhagalpur": {
+    "state": "Bihar", "lat": 25.24, "lon": 86.97,
+    "pH": 6.7, "Nitrogen_N_ppm": 130, "Phosphorus_P_ppm": 26, "Potassium_K_ppm": 200,
+    "Organic_Matter": 3.0, "Texture": "Loam", "Soil_Color": "Brown",
+    "Bulk_Density": 1.37, "Moisture": 24, "Porosity": 43, "WHC": 40,
+    "CEC": 20, "EC": 0.44, "Depth": 30,
+    "Temperature": 28, "Humidity": 68, "Precipitation": 9.5,
+    "Evapotranspiration": 4.6, "Root_Zone_Moisture": 0.38, "Water_Table_Depth": 6,
+    "Soil_Depth": 1.4, "soil_type_label": "Alluvial"
+  },
+  "Bellary": {
+    "state": "Karnataka", "lat": 15.14, "lon": 76.92,
+    "pH": 7.4, "Nitrogen_N_ppm": 90, "Phosphorus_P_ppm": 16, "Potassium_K_ppm": 235,
+    "Organic_Matter": 2.2, "Texture": "Clay", "Soil_Color": "Black",
+    "Bulk_Density": 1.36, "Moisture": 22, "Porosity": 42, "WHC": 44,
+    "CEC": 32, "EC": 0.52, "Depth": 30,
+    "Temperature": 30, "Humidity": 50, "Precipitation": 4.5,
+    "Evapotranspiration": 5.4, "Root_Zone_Moisture": 0.30, "Water_Table_Depth": 12,
+    "Soil_Depth": 1.4, "soil_type_label": "Black"
+  },
+  "Prakasam": {
+    "state": "Andhra Pradesh", "lat": 15.35, "lon": 79.44,
+    "pH": 7.0, "Nitrogen_N_ppm": 105, "Phosphorus_P_ppm": 20, "Potassium_K_ppm": 215,
+    "Organic_Matter": 2.5, "Texture": "Sandy Loam", "Soil_Color": "Reddish Brown",
+    "Bulk_Density": 1.42, "Moisture": 18, "Porosity": 38, "WHC": 33,
+    "CEC": 18, "EC": 0.52, "Depth": 26,
+    "Temperature": 30, "Humidity": 60, "Precipitation": 5.5,
+    "Evapotranspiration": 5.2, "Root_Zone_Moisture": 0.30, "Water_Table_Depth": 10,
+    "Soil_Depth": 1.2, "soil_type_label": "Red"
+  }
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mitti Mitra</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+:root { --g:#0d3b2e; --gm:#1a5c3a; --gl:#e8f5e9; --accent:#2d6a4f; --bg:#f4f1ea; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family: "Times New Roman", Times, serif; background: var(--bg); color:#1a1a1a; line-height: 1.6; }
+.screen { display:none; min-height:100vh; }
+.screen.active { display:block; }
+.header { background: linear-gradient(90deg, #0d3b2e, #1a5c3a); color:white; padding:14px 18px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:20; box-shadow:0 2px 10px rgba(0,0,0,0.15); }
+.logo { font-weight:700; font-size:1.25rem; display:flex; align-items:center; gap:8px; }
+.container { max-width:520px; margin:0 auto; padding:18px 16px 50px; }
+.card { background:white; border-radius:18px; padding:18px; margin-bottom:16px; box-shadow:0 4px 18px rgba(0,0,0,0.07); transition:transform 0.15s; }
+.card:hover { transform:translateY(-2px); }
+.card h3 { color:var(--g); margin-bottom:14px; font-size:1.1rem; display:flex; align-items:center; gap:8px; }
+label { display:block; font-size:0.85rem; color:#555; margin:10px 0 4px; font-weight:600; }
+input, select { width:100%; padding:11px 13px; border:1.5px solid #ddd; border-radius:10px; font-size:1rem; background:#fafafa; font-family:inherit; }
+input:focus, select:focus { outline:none; border-color:var(--accent); background:white; }
+.row { display:flex; gap:10px; }
+.row > * { flex:1; }
+.btn { width:100%; padding:13px; border:none; border-radius:12px; font-weight:700; font-size:1.05rem; cursor:pointer; margin-top:10px; font-family:inherit; transition:all 0.15s; }
+.btn-primary { background: linear-gradient(90deg, var(--g), var(--gm)); color:white; }
+.btn-primary:hover { filter:brightness(1.1); box-shadow:0 4px 12px rgba(13,59,46,0.3); }
+.btn-outline { background:white; color:var(--g); border:2px solid var(--g); }
+.btn-outline:hover { background:var(--gl); }
+.chip { display:inline-block; padding:6px 12px; background:#fff8e1; border-radius:20px; margin:3px; font-size:0.82rem; cursor:pointer; border:1px solid #ffe082; }
+.chip:hover { background:#ffecb3; }
+.stage { display:flex; gap:8px; margin:12px 0; }
+.stage button { flex:1; padding:10px; border-radius:10px; border:1.5px solid #ddd; background:white; cursor:pointer; font-family:inherit; }
+.stage button.active { background:var(--gm); color:white; border-color:var(--gm); }
+.badge { display:inline-block; padding:3px 10px; border-radius:12px; font-size:0.75rem; font-weight:700; }
+.badge-low { background:#fee2e2; color:#991b1b; }
+.badge-med { background:#fef3c7; color:#92400e; }
+.badge-high { background:#dcfce7; color:#166534; }
+.rec { border:2px solid #bbf7d0; border-radius:16px; padding:14px; margin:10px 0; background:linear-gradient(135deg,#f0fdf4,#e8f5e9); }
+.gauge-wrap { position:relative; height:200px; margin:0 auto; }
+</style>
+</head>
+<body>
+
+<div id="screen-login" class="screen active">
+  <div style="max-width:420px;margin:70px auto;padding:32px;background:white;border-radius:24px;box-shadow:0 10px 40px rgba(0,0,0,0.12);text-align:center;">
+    <div style="font-size:64px;margin-bottom:10px;">🌱</div>
+    <h1 style="color:var(--g);font-size:2rem;">Mitti Mitra</h1>
+    <p style="color:#666;margin:8px 0 24px;">Soil Microbiome Crop Rotation</p>
+    <input id="phone" placeholder="Mobile Number" maxlength="10" style="text-align:center;font-size:1.15rem;letter-spacing:2px;">
+    <button class="btn btn-primary" onclick="doLogin()">Login / आगे बढ़ें</button>
+  </div>
+</div>
+
+<div id="screen-input" class="screen">
+  <div class="header">
+    <div class="logo"><i class="fa-solid fa-leaf"></i> Mitti Mitra</div>
+    <button onclick="showScreen('screen-profile')" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:6px 14px;border-radius:20px;cursor:pointer;font-family:inherit;"><i class="fa-solid fa-user"></i> Profile</button>
+  </div>
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+      <strong style="color:var(--g);font-size:1.15rem;">Khet ki Jankari / Enter Farm Details</strong>
+      <span style="background:var(--gl);color:var(--gm);padding:5px 12px;border-radius:14px;font-size:0.8rem;">Step 1 of 2</span>
+    </div>
+
+    <div class="card">
+      <h3><i class="fa-solid fa-location-dot"></i> 1) Location (स्थान)</h3>
+      <div class="row">
+        <div><label>गाँव / Village</label><input id="village" value="Bisrakh"></div>
+        <div><label>जिला / District</label><select id="district"></select></div>
+        <div><label>State</label><select id="state"></select></div>
+      </div>
+      <button class="btn btn-outline" onclick="autoFetch()"><i class="fa-solid fa-location-crosshairs"></i> Mera location use karein</button>
+      <small id="geo-status" style="color:#888;display:block;margin-top:6px;">location se mitti aur mausam auto</small>
+    </div>
+
+    <div class="card">
+      <h3><i class="fa-solid fa-wheat-awn"></i> 2) Pichhli faslein / Past Crops</h3>
+      <label>Last crop (required)</label>
+      <select id="past-crop"></select>
+      <div id="chips" style="margin-top:10px;"></div>
+    </div>
+
+    <div class="card">
+      <h3><i class="fa-solid fa-seedling"></i> 3) Current crop & Irrigation</h3>
+      <label>Current crop (वर्तमान फसल)</label>
+      <select id="current-crop"></select>
+      <div class="stage">
+        <button type="button" onclick="setStage(this)">🌱 Just sown</button>
+        <button type="button" class="active" onclick="setStage(this)">🌿 Standing</button>
+        <button type="button" onclick="setStage(this)">🌾 Near harvest</button>
+      </div>
+      <div class="row">
+        <div><label>Days</label><input id="days" type="number" value="75"></div>
+        <div><label>Field size (acre)</label><input id="field-size" type="number" value="2.5" step="0.1"></div>
+      </div>
+      <label>Irrigation (सिंचाई का साधन)</label>
+      <select id="irrigation">
+        <option>Canal / नहर</option>
+        <option>Tubewell / ट्यूबवेल</option>
+        <option>Rain-fed / बारिश</option>
+        <option>Drip / ड्रिप</option>
+        <option>Sprinkler / स्प्रिंकलर</option>
+      </select>
+    </div>
+
+    <button class="btn btn-primary" onclick="goToResults()"><i class="fa-solid fa-arrow-right"></i> Aage Badhein / Continue</button>
+  </div>
+</div>
+
+<div id="screen-results" class="screen">
+  <div class="header">
+    <div class="logo"><i class="fa-solid fa-leaf"></i> Mitti Mitra</div>
+    <button onclick="showScreen('screen-input')" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:6px 14px;border-radius:20px;cursor:pointer;font-family:inherit;">← Back</button>
+  </div>
+  <div class="container">
+    <div id="context" class="card"></div>
+    <div class="card">
+      <h3><i class="fa-solid fa-gauge-high"></i> Soil Microbiome Score</h3>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <div class="gauge-wrap" style="flex:1; height:180px;"><canvas id="gaugeChart"></canvas></div>
+        <div style="flex:0 0 140px; text-align:center;">
+          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=280&h=280&fit=crop" alt="Healthy plant" style="width:130px; height:130px; object-fit:cover; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.12);">
+        </div>
+      </div>
+      <div id="score-text" style="text-align:center;font-size:1.8rem;font-weight:700;color:var(--g);margin-top:8px;"></div>
+      <div id="score-status" style="text-align:center;color:#666;"></div>
+    </div>
+    <div class="card">
+      <h3><i class="fa-solid fa-bacteria"></i> Soil Microbiome Status</h3>
+      <div id="microbe"></div>
+    </div>
+    <div class="card">
+      <h3><i class="fa-solid fa-star"></i> Sabse acchi agli fasal</h3>
+      <div id="recs"></div>
+    </div>
+    <div class="card">
+      <h3><i class="fa-solid fa-flask"></i> Inferred Soil Nutrients</h3>
+      <div id="nutrients"></div>
+    </div>
+    <button class="btn btn-primary" onclick="savePlan()"><i class="fa-solid fa-bookmark"></i> Yojana Save karein</button>
+  </div>
+</div>
+
+<div id="screen-profile" class="screen">
+  <div class="header">
+    <div class="logo"><i class="fa-solid fa-user"></i> Profile</div>
+    <button onclick="showScreen('screen-input')" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:6px 14px;border-radius:20px;cursor:pointer;font-family:inherit;">← Back</button>
+  </div>
+  <div class="container">
+    <div class="card" style="text-align:center;">
+      <div style="font-size:48px;">👨‍🌾</div>
+      <div id="prof-phone" style="font-weight:700;color:var(--g);font-size:1.2rem;"></div>
+    </div>
+    <h3 style="color:var(--g);margin:16px 0 8px;">Farming History / इतिहास</h3>
+    <div id="history"></div>
+  </div>
+</div>
+
+<script>
+const CROPS = ["Rice","Wheat","Maize","Sorghum","Pearl Millet","Finger Millet","Barley","Chickpea","Pigeon Pea","Green Gram","Black Gram","Lentil","Groundnut","Soybean","Mustard","Sesame","Sunflower","Cotton","Sugarcane","Jute","Potato","Onion","Tomato","Brinjal","Okra","Cabbage","Cauliflower","Chilli","Ginger","Turmeric","Mango","Banana","Guava","Papaya","Coconut","Cumin","Tea","Coffee","Cashew","Dhaincha","Fallow"].sort();
+let locations = {};
+let geo = {lat:28.47, lon:77.50}, weather={temp:26,humidity:58,rain:2};
+let user = localStorage.getItem('mitti_user') || null;
+let gaugeChart = null;
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if (id === 'screen-profile') loadHist();
+}
+function doLogin() {
+  const p = document.getElementById('phone').value.replace(/\D/g,'');
+  if (p.length < 10) { alert('Enter 10-digit mobile number'); return; }
+  user = p; localStorage.setItem('mitti_user', p); showScreen('screen-input');
+}
+function setStage(el) {
+  document.querySelectorAll('.stage button').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+}
+
+async function init() {
+  if (user) showScreen('screen-input');
+  try {
+    locations = await (await fetch('/static/india_locations.json')).json();
+  } catch(e) { console.warn('Locations not loaded'); }
+  const states = Object.keys(locations).sort();
+  document.getElementById('state').innerHTML = states.map(s => `<option>${s}</option>`).join('');
+  document.getElementById('state').onchange = updateDist;
+  updateDist();
+  const pc = document.getElementById('past-crop'), cc = document.getElementById('current-crop');
+  pc.innerHTML = cc.innerHTML = CROPS.map(c => `<option>${c}</option>`).join('');
+  document.getElementById('chips').innerHTML = ["Rice","Wheat","Mustard","Moong","Potato","Sugarcane"].map(c =>
+    `<span class="chip" onclick="document.getElementById('past-crop').value='${c}'">${c}</span>`
+  ).join('');
+}
+function updateDist() {
+  const s = document.getElementById('state').value;
+  document.getElementById('district').innerHTML = (locations[s] || []).map(d => `<option>${d}</option>`).join('');
+}
+async function autoFetch() {
+  const st = document.getElementById('geo-status'); st.textContent = 'Detecting...';
+  if (!navigator.geolocation) return;
+  navigator.geolocation.getCurrentPosition(async p => {
+    geo.lat = p.coords.latitude; geo.lon = p.coords.longitude;
+    st.textContent = `✓ ${geo.lat.toFixed(3)}, ${geo.lon.toFixed(3)}`;
+    try {
+      const r = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${geo.lat}&longitude=${geo.lon}&current=temperature_2m,relative_humidity_2m&daily=precipitation_sum&forecast_days=3&timezone=Asia/Kolkata`);
+      const d = await r.json();
+      weather.temp = d.current?.temperature_2m ?? weather.temp;
+      weather.humidity = d.current?.relative_humidity_2m ?? weather.humidity;
+      weather.rain = (d.daily?.precipitation_sum||[0]).reduce((a,b)=>a+b,0);
+    } catch(e){}
+  });
+}
+
+function drawGauge(score) {
+  const ctx = document.getElementById('gaugeChart').getContext('2d');
+  if (gaugeChart) gaugeChart.destroy();
+  gaugeChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: { datasets: [{ data: [score, 100-score], backgroundColor: [score>70?'#22c55e':score>45?'#eab308':'#ef4444','#e5e7eb'], borderWidth:0, circumference:180, rotation:270 }] },
+    options: { cutout:'72%', plugins:{legend:{display:false},tooltip:{enabled:false}}, animation:{animateRotate:true} }
+  });
+  document.getElementById('score-text').textContent = score + ' / 100';
+  document.getElementById('score-status').textContent = score>75?'Accha — soil healthy':score>55?'Theek-thaak':'Attention needed';
+}
+
+async function goToResults() {
+  const payload = {
+    past_crop: document.getElementById('past-crop').value,
+    latitude: geo.lat, longitude: geo.lon,
+    temperature_c: weather.temp, humidity_pct: weather.humidity, rainfall_mm: weather.rain,
+    village: document.getElementById('village').value,
+    district: document.getElementById('district').value,
+    state: document.getElementById('state').value,
+    irrigation: document.getElementById('irrigation').value
+  };
+  showScreen('screen-results');
+  document.getElementById('context').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${payload.village}, ${payload.district}, ${payload.state}<br><i class="fa-solid fa-clock-rotate-left"></i> History: ${payload.past_crop}`;
+
+  try {
+    const res = await fetch('/predict', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
+    const data = await res.json();
+    const score = data.microbiome_score || 72;
+    drawGauge(score);
+
+    const nFix = ['Chickpea','Green Gram','Black Gram','Soybean','Dhaincha'].includes(payload.past_crop) ? 'Medium' : 'Low';
+    document.getElementById('microbe').innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center;margin:8px 0;"><span><i class="fa-solid fa-bacteria" style="color:#16a34a;"></i> Beneficial bacteria</span><span class="badge badge-med">Medium</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin:8px 0;"><span><i class="fa-solid fa-mushroom" style="color:#d97706;"></i> Fungi</span><span class="badge badge-low">Low</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin:8px 0;"><span><i class="fa-solid fa-seedling" style="color:#15803d;"></i> Nitrogen-fixers</span><span class="badge badge-${nFix==='Medium'?'med':'low'}">${nFix}</span></div>
+    `;
+
+    document.getElementById('recs').innerHTML = (data.recommendations||[]).slice(0,3).map((r,i) => `
+      <div class="rec">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <strong style="font-size:1.1rem;">${i===0?'⭐ ':''}${r.crop}</strong>
+          <span class="badge badge-high">${r.confidence}%</span>
+        </div>
+        <div style="font-size:0.9rem;margin-top:6px;color:#333;">
+          <div><strong>क्यों काम करेगी:</strong> Suitable after ${payload.past_crop}. ${r.growing_requirements.split('.')[0]}.</div>
+          <div><strong>अनुमानित उपज:</strong> Expected improvement in next cycle.</div>
+          <div><strong>मिट्टी पर प्रभाव:</strong> ${['Green Gram','Chickpea','Dhaincha','Soybean'].includes(r.crop)?'Adds nitrogen & organic matter':'Balances nutrient uptake'}.</div>
+        </div>
+      </div>
+    `).join('');
+
+    document.getElementById('nutrients').innerHTML = (data.nutrient_status||[]).map(n=>`<div>• ${n}</div>`).join('') || '• Status moderate';
+    if (data.inferred_soil) {
+      document.getElementById('nutrients').innerHTML += `<div style="font-size:0.85rem;color:#666;margin-top:8px;">N: ${data.inferred_soil.N_ppm} · P: ${data.inferred_soil.P_ppm} · K: ${data.inferred_soil.K_ppm} · pH: ${data.inferred_soil.pH}</div>`;
+    }
+    window.last = {payload, data, score};
+  } catch(e) {
+    document.getElementById('recs').innerHTML = `<div style="color:red;">Error: ${e.message}</div>`;
+  }
+}
+
+function savePlan() {
+  if (!user) { alert('Please login first'); return; }
+  const h = JSON.parse(localStorage.getItem('hist_'+user) || '[]');
+  h.unshift({date: new Date().toLocaleString(), ...window.last});
+  localStorage.setItem('hist_'+user, JSON.stringify(h.slice(0,20)));
+  alert('Plan saved to your profile!');
+}
+function loadHist() {
+  document.getElementById('prof-phone').textContent = user || '—';
+  const h = JSON.parse(localStorage.getItem('hist_'+(user||'')) || '[]');
+  document.getElementById('history').innerHTML = h.length
+    ? h.map(x => `<div class="card"><strong>${x.payload?.village || 'Farm'}</strong> · ${x.payload?.past_crop}<br><small style="color:#666;">${x.date}</small><br>Top: ${(x.data?.recommendations||[]).slice(0,2).map(r=>r.crop).join(', ')}</div>`).join('')
+    : '<p style="color:#888;">No saved plans yet.</p>';
+}
+init();
+</script>
+</body>
+</html>
